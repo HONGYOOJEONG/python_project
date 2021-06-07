@@ -23,6 +23,19 @@
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
   <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$(function() {
+  $('#wantBtn').click( function() {
+    if( $(this).val() == '찜하기' ) {
+      $(this).val('찜완료');
+    }
+    else {
+      $(this).val('찜완료');
+    }
+  });
+});
+</script>
   <style type="text/css">
     .img-box{
       margin:0px auto;
@@ -35,7 +48,13 @@
   .dImage{
     margin:0px auto;
   }
-
+  button, html input[type=button], input[type=reset], input[type=submit] {
+    color: white;
+    -webkit-appearance: button;
+    width: 100px;
+    height: 35px;
+    background-color: cornflowerblue;
+}
   </style>
 </head>
 
@@ -120,9 +139,7 @@
                 <a href="">
                   장바구니
                 </a>
-                <a href="">
-                  ❤ / ♡
-                </a>
+                <input type="button" class="btn btn-sm btn-default" id="wantBtn" value="찜하기">
               </div>
             </div>
           </div>
@@ -150,7 +167,7 @@
   <!-- footer section -->
 
 
-  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
 </body>

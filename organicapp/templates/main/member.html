@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Ninom</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this templates -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
+<script type="text/javascript">
+$(function(){
+	   $('#checkBtn').click(function(){
+	      let id=$('#id').val();
+	      // 아이디 입력이 안됐을때
+	      if(id.trim()=="")
+	      {
+	         alert("아이디를 입력하세요")
+	         $('#id').focus();
+	         return;
+	      }
+	      $.ajax({
+	         type:'post',
+	         url:'login_ajax',
+	         data:{ "id" : id},
+	         async:false,
+	         success:function(result)
+	         {
+	            console.log(result)
+	            if(result==1)
+	            {
+	               alert("아이디 사용 가능합니다");
+	            }
+	            if(result==0)
+	            {
+	               alert("이미 같은 아이디가 있습니다");
+	               $('#id').val().text("");
+	            }
+	         }
+	      })
+	   })
+
+	})
+</script>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="brand_box">
+      <a class="navbar-brand" href="index.html">
+        <span>
+          Ninom
+        </span>
+      </a>
+    </div>
+    <!-- end header section -->
+  </div>
+
+  <!-- nav section -->
+ {% include 'main/menu.html' %}
+  <!-- end nav section -->
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-lg-2 col-md-10 offset-md-1">
+          <div class="heading_container">
+            <hr>
+            <h2>
+              회원 가입
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout_padding2-top">
+          <div class="row">
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-4">
+
+          <form method=post action="../member/join_ok" name="join_frm">
+
+        <fieldset>
+          <label for="id">아이디 &nbsp; &nbsp;<input type="button" value="중복체크" class="btn btn-sm btn-primary" id="checkBtn"></label>
+          <br>
+         <input type=text name="id" id="id" class="input-sm" style="float:left">&nbsp;
+
+          <label for="name">이름</label>
+          <input type=text name="name" id="name" class="input-sm" autocomplete="off">
+
+          <label for="password">비밀번호</label>
+            <input type=password name="pwd" id="pwd" class="input-sm" style="float:left" autocomplete="off"><br>
+         <label for="password_check">비밀번호&nbsp;확인</label>
+         <input type=password name="pwd" id="pwd1" class="input-sm" style="float:left" placeholder="재입력" autocomplete="off"><br>
+
+          <label for="birthday">생년월일</label>
+          <input type=date size="20" name="birthday" autocomplete="off">
+
+
+           <label for="email">우편번호 &nbsp; &nbsp;<br>
+               <input type=button value="우편번호검색" class="btn btn-sm btn-primary" id="postBtn" >
+           </label>
+           <input type=text name="post" id="post" class="input-sm" size=10 readonly style="float: left" autocomplete="off"><br>
+
+           <label for="email" autocomplete="off">주소</label>
+          <input type=text name="addr1" id="addr1" class="input-sm" size=45 readonly autocomplete="off">
+
+            <label for="email" autocomplete="off">상세주소</label>
+           <input type=text name="addr2" id="addr2" class="input-sm" size=45 autocomplete="off">
+
+           <label for="email" autocomplete="off">전화번호</label>
+			<input type=text name="phone1" id="phone1" class="input-sm" size=5 placeholder="-를 제외하고 입력하시오"
+      			style="float: left" autocomplete="off"><br>
+
+           <label for="email">이메일</label>
+            <input type=text name="email" id="email" class="input-sm" size=45 autocomplete="off">
+             </fieldset>
+
+        <button type="submit" class="btn btn-sm btn-warning">회원가입</button>
+        <button type="button" onclick="javascript:history.back()" class="btn btn-sm btn-warning">취소</button >
+
+            </form>
+          </div>
+      </div>
+          <div class="col-sm-3"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+  {% include 'main/footer.html' %}
+  <!-- footer section -->
+
+
+</body>
+
+</html>

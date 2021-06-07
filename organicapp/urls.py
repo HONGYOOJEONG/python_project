@@ -27,7 +27,10 @@ urlpatterns=[
     path('main/',views.main),
     path('login_main/',views.login_main),
     path('book_list/',views.book_list),
-    path('book_detail/',views.book_detail)
+    path('book_detail/',views.book_detail),
+    path('member/',views.member),
+    path('member/login_ajax',views.ajax),
+    path('member/join_ok/',views.join_ok)
 
 
 ]

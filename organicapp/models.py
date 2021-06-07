@@ -499,4 +499,22 @@ def book_detail(no):
     cursor.close()
     conn.close()
     return book_dData
-
+def join_ok():
+    conn = getConnection()
+    cursor = conn.cursor()
+    sql=f"""
+            INSERT INTO member(id,pwd,name,email,add1,add2,phone1,admin)
+           VALUES(:1,:2,:3,:4,:5,:6,:7,:8,'n')
+        """
+def idCheck(id):
+    conn=getConnection()
+    cursor=conn.cursor()
+    sql=f"""
+            SELECT id FROM member
+            WHERE id='{id}'
+        """
+    cursor.execute(sql)
+    id_check=cursor.fetchone()
+    cursor.close()
+    conn.close()
+    return id_check[0]

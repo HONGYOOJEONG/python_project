@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponse
 from organicapp import models
 from urllib import parse
 
@@ -329,3 +329,19 @@ def book_detail(request):
     }
     return render(request,"book/book_detail.html",bd)
 
+def member(request):
+    return render(request,"main/member.html")
+
+def ajax(request):
+    id=request.POST['id']
+    id_check=models.idCheck(id)
+    if id_check!="":
+        id_check=0
+    else:
+        id_check=1
+    print(id_check)
+    return HttpResponse(id_check)
+
+def join_ok(request):
+
+    return redirect("/member/")
