@@ -60,6 +60,13 @@ $(function(){
 
 	})
 </script>
+    <style type="text/css">
+        .btn-primary {
+    color: #fff;
+    background-color: #20272d;
+    border-color: #2e6da4;
+}
+    </style>
 </head>
 
 <body class="sub_page">
@@ -68,7 +75,7 @@ $(function(){
     <div class="brand_box">
       <a class="navbar-brand" href="index.html">
         <span>
-          Ninom
+          회원 가입
         </span>
       </a>
     </div>
@@ -137,8 +144,8 @@ $(function(){
             <input type=text name="email" id="email" class="input-sm" size=45 autocomplete="off">
              </fieldset>
 
-        <button type="submit" class="btn btn-sm btn-warning">회원가입</button>
-        <button type="button" onclick="javascript:history.back()" class="btn btn-sm btn-warning">취소</button >
+        <button type="submit" class="btn btn-sm btn-primary">회원가입</button>
+        <button type="button" onclick="javascript:history.back()" class="btn btn-sm btn-primary">취소</button >
 
             </form>
           </div>
@@ -147,17 +154,10 @@ $(function(){
         </div>
       </div>
     </div>
-
-
   </section>
   <!-- end contact section -->
-
-
   <!-- info section -->
   {% include 'main/footer.html' %}
   <!-- footer section -->
-
-
 </body>
-
 </html>
