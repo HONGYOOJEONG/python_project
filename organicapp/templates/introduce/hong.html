@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+{%  load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Ninom</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this templates -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <style>
+    .brand_box .navbar-brand span {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 2px 6px 2px black;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 100%;
+    width: fit-content;
+}
+
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="brand_box">
+      <a class="navbar-brand" href="index.html">
+        <span>
+          제작자 소개
+        </span>
+      </a>
+    </div>
+    <!-- end header section -->
+  </div>
+
+  <!-- nav section -->
+  {% include 'main/menu.html' %}
+  <!-- end nav section -->
+
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container ">
+      <div class="heading_container">
+        <h2>
+          제작자 소개
+        </h2>
+        <hr>
+      </div>
+      <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="client_container layout_padding-top">
+              <div class="img-box">
+                <img src="{% static 'images/my_img.jpg' %}">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  홍유정
+                </h5>
+                <p>
+                  <img src="{% static 'images/left-quote.png' %}" alt="">
+                  <span>
+                    두려움 없는 도전가
+                  </span>
+                  <img src="{% static 'images/right-quote.png' %}" alt=""> <br>
+                  🏫 학력사항<br>
+                  2012-03 ~ 2015.02 상암고등학교 졸업<br>
+                  2018.03 ~ 2021.08 건국대학교  졸업예정
+                  <hr>
+                  💻 전산 기술<br>
+                  Language: &nbsp;    C, Java, Python<br>
+                  DB       :&nbsp;    Oracle, sqlite3, mysql<br>
+                  사용가능기술:&nbsp;   JSP,Ajax,VueJs,mybatis,css,Html5<br>
+                  Framework  :&nbsp;  Spring, Django<br>
+                <hr>
+                하기 싫은 일을 미룬다면 언젠가는 되돌아 오기 때문에<br>
+                그때 일을 처리하자가 저의 생활 신조입니다<br>
+                낯설거나 익숙하지 않은 일에도 적극적인 태도로 임하는 자세를 가졌으며<br>
+                새로운 일을 대하는 마음가짐이 개방적이고 긍정적이므로<br>
+                업무의 효율성을 증대 시키는 것에 도움이 될 것입니다<br>
+                <hr>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding-top">
+              <div class="img-box">
+                <img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/133306595_143959774192121_9222191910441187511_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Oa-awaegVeEAX8y9kK5&_nc_ht=scontent-ssn1-1.xx&oh=b50b6920381bbd3c02c0e2e06e05c066&oe=60E05C51" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  식량자원과학과
+                </h5>
+                <p>
+                  <img src="{% static 'images/left-quote.png' %}" alt="">
+                  <span>
+                    기능성 생물소재는 지역과 민족에 따라<br>고유한 알맞은 소재를 다양하게 이용한다
+                  </span>
+                  <img src="{% static 'images/right-quote.png' %}" alt=""> <br>
+                  🏫 학과소개<br>
+                  - 유전육종학 및 생명공학적 기술과 기능성 신물질 탐색 및 분리․<br>동정기술을 이용한 신소재 탐구<br>
+                  - 탐구된 신소재의 환경 친화적인 재배 및 생산기술 및<br> 식품 이용 등에 필요한 지식을 습득<br>
+                  <hr>
+                 💻 학과 홈페이지<br>
+                  <a href="http://www.konkuk.ac.kr/do/cropscience/Index.do">바로 가기</a>
+                  <hr>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding-top">
+              <div class="img-box">
+                <img src="https://image.freepik.com/free-vector/programmer-with-code-cat-on-book-and-coffee-vector-clip-art-illustration_138676-92.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  제작 동기
+                </h5>
+                <p>
+                  <img src="{% static 'images/left-quote.png' %}" alt="">
+                  <span>
+                    전공 과목에 대한 폭넓은 이해와 열정
+                  </span>
+                  <img src="{% static 'images/right-quote.png' %}" alt=""> <br>
+                  식량자원과학과 그게 뭐야?😂<br>
+                  전공에 대한 질문에 대답하면 항상 듣는 말이였습니다<br>
+                  흔하지 않지만 특별한 저희 과를 소개해보고자<br>
+                  특별한 사이트를 제작하게 되었습니다<br>
+                  <hr>
+                  💻홈페이지 소개<br>
+                  -종자: 식물 종자의 종류와 소개<br>
+                 - 재배기술: 종자들의 재배기술 소개 <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;관련 매거진 소개<br>
+                  -자유게시판: 이용자들의 정보 소통<br>
+                  <hr>
+
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- info section -->
+  {% include 'main/footer.html' %}
+  <!-- footer section -->
+
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

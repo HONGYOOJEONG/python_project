@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Ninom</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this templates -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <style type="text/css">
+    .brand_box .navbar-brand span {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px #000;
+}
+.slider_section .img-box img {
+    width: 100%;
+    height: 300px;
+}
+.fam {
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 100%;
+}
+.fruit_section .fruit_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 60%;
+    margin: 0px auto;
+}
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="brand_box">
+      <a class="navbar-brand" href="index.html">
+        <span>
+          식량자원과학과
+        </span>
+      </a>
+    </div>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="img-box">
+              <img src="http://www.konkuk.ac.kr/Administration/cropscience/img/img_sub_visual.jpg">
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="img-box">
+              <img src="https://www.asiaseedmall.com/data/editor/goods/210531/c91efe86759dffb04ded26c5a6aea421_161823.jpg" alt="">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="img-box">
+              <img src="https://ad-img.ebaykorea.com/ADS/Contents_/2021_05_27_04_29_12/55c56644dc3b4e6a.JPG" alt="">
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- nav section -->
+  {% include 'main/menu.html' %}
+  <!-- end nav section -->
+
+  <!-- shop section -->
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="box">
+        <div class="detail-box">
+          <h2>
+            종자 마켓
+          </h2>
+          <p>
+            다양한 종류의 종자를 만나보세요!
+          </p>
+        </div>
+        <div class="img-box">
+          <img src="{% static 'images/shop-img.jpg' %}" alt="">
+        </div>
+        <div class="btn-box">
+          <a href="/organic/seed_list/">
+            바로 가기
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end shop section -->
+
+  <!-- about section -->
+  <section class="about_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-md-4">
+          <div class="img-box">
+            <img src="https://image.freepik.com/free-vector/berry-cultivation-farming-technology-illustration_82574-3123.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-box">
+            <div class="heading_container">
+              <hr>
+              <h2>
+                여러가지 재배기술
+              </h2>
+            </div>
+            <p>
+              초보 농부들을 위한 여러가지 재배 기술을 지금 확인해 보세요<br>
+              주말 농장 잡지 정기구독 이벤트도 놓치지 마세요
+            </p>
+            <a href="/organic/plantation_insect/">
+              바로 가기
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  <!-- client section -->
+  <div style="height:50px"></div>
+  <section class="client_section layout_padding-bottom">
+    <div class="container ">
+      <div class="heading_container">
+        <h2>
+          실시간 인기 종자
+        </h2>
+        <hr>
+      </div>
+      <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="client_container layout_padding-top">
+              <div class="img-box">
+                <a href="http://127.0.0.1:8000/organic/seed_detail/?no=1">
+                <img src="http://farmdepot.co.kr/web/product/medium/20191201/98a9b3c05aff54317bf84cfbda9a3afa.jpg" class="fam"></a>
+              </div>
+              <div class="detail-box">
+                <h3>
+                  금잔화 (500립/소) A-2
+                </h3>
+                <p>
+                   <img src="{% static 'images/left-quote.png' %}" alt="">
+                  <span>
+                      다양한 색으로 피는 화단용 꽃!
+                  </span>
+                  <img src="{% static 'images/right-quote.png' %}" alt=""> <br>
+                  금잔화의 꽃말은 이별의 슬픔, 비통, 실망, 아쉬움입니다.<br>
+                  태양의 신을 숭배한 소년이 구름의 신의 질투를 받아<br>
+                  태양을 볼 수 없게되어 <br>
+                  소년은 슬퍼하며 죽었습니다.<br>
+                  태양의 신은 죽은 소년을 애도하며 그 시체를 황금색 꽃으로 환생시켰습니다.<br>
+                  그래서 금잔화는 조금만 어두워져도 꽃잎을 닫고<br>
+                  따뜻한 아침 햇빛에 꽃잎을 여는 걸까요?<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding-top">
+              <div class="img-box">
+                <a href="">
+                <img src="http://farmdepot.co.kr/web/product/medium/20191201/fc4bf1eb72e75767f3d2dd4157586219.jpg"  class="fam" alt=""></a>
+              </div>
+              <div class="detail-box">
+                <h3>
+                  맨드라미(닭벼슬형/1000립/소) A-2
+                </h3>
+                <p>
+                  <img src="{% static 'images/left-quote.png' %}" alt="">
+
+                  <span>
+                    적, 홍, 황 등이며 곁가지 발생이 적고 비교적 재배하기 쉽다!
+                  </span>
+                  <img src="{% static 'images/right-quote.png' %}" alt=""> <br>
+                    맨드라미 꽃말은 치정,괴기,감정,영생,시들지 않는사랑, 건강 ,불신<br>
+                    닭벼슬 모양의 맨드라미 꽃<br>
+                    비름과에 속하는 일녀생 초본식물<br>
+                    맨드라미 꽃 여성에게 좋다는 효능을 갖고 있다고 합니다<br>
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container layout_padding-top">
+              <div class="img-box">
+                <a href="">
+                <img src="http://farmdepot.co.kr/web/product/medium/20191201/e9b512bdf36e7ea80939fc17aafcb2ac.jpg"  class="fam" alt=""></a>
+              </div>
+              <div class="detail-box">
+                <h3>
+                  시로카모메 백로즈_전문농가용 (1000립) A-2
+                </h3>
+                <p>
+                  <img src="{% static 'images/left-quote.png' %}" alt="">
+                  <span>
+                    예쁘고 영양많은 장식용 쌈샐러드채소!* (전문농가용)
+                  </span>
+                  <img src="{% static 'images/right-quote.png' %}" alt=""> <br>
+                  왕성하게 자라고 줄기가 굵어  추위를 잘 견디는 호냉성 작물<br>
+                  잎은 끝이 오글거리고 착색된 잎은 백색<br>
+                  단일조건에서 흰색으로 변하는 잎은 샐러드 색을 내는<br>
+                  채소 또는 장식채소로 이용<br>
+                  봄 파종 재배시 잎에 색깔이 나지 않고 케일처럼 자람<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+
+  <!-- contact section -->
+  <section class="fruit_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <hr>
+        <h2>
+          원예 도서 모음집
+        </h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="fruit_container">
+        <div class="box">
+          <img src="http://asiaseed.net/data/file/product02/31216852_euJyx63v_95b0576f225c8197ffa45d3e3a2fddf315a6baab.jpg" alt="">
+          <div class="link_box">
+            <h5>
+              베란다 텃밭
+            </h5>
+            <a href="http://127.0.0.1:8000/organic/book_detail/?no=10">
+              상세 보기
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="http://asiaseed.net/data/file/product02/31216852_X0VYgeCa_20c0ffac6b1d5e24ac16bfc23c66b078b6095327.gif" alt="">
+          <div class="link_box">
+            <h5>
+              기능성 채소
+            </h5>
+            <a href="http://127.0.0.1:8000/organic/book_detail/?no=7">
+              상세보기
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="http://asiaseed.net/data/file/product02/31216852_6vILpoZP_732877caecb7cef2ee36c06f70f5398cb9a69e36.jpg" alt="">
+          <div class="link_box">
+            <h5>
+              호박
+            </h5>
+            <a href="http://127.0.0.1:8000/organic/book_detail/?no=2">
+              상세보기
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="http://asiaseed.net/data/file/product02/31216852_56i9MqnC_57dd2229b574d677bc626555b0c9886dbfcb790d.gif" alt="">
+          <div class="link_box">
+            <h5>
+              기능성 건강식 모듬쌈채
+            </h5>
+            <a href="http://127.0.0.1:8000/organic/book_detail/?no=6">
+              상세보기
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="http://asiaseed.net/data/file/product02/31216852_SjXzZxQ0_f646a82582af484c9873bd3108c0a82a406f7789.gif" alt="">
+          <div class="link_box">
+            <h5>
+              텃밭 채소 가꾸기
+            </h5>
+            <a href="http://127.0.0.1:8000/organic/book_detail/?no=4">
+              상세보기
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="http://asiaseed.net/data/file/product02/31216852_jtWwYE5G_f2445ae0e5cbf04a67a8911dbff90f24fbfba204.gif" alt="">
+          <div class="link_box">
+            <h5>
+              새로운 채소 도감
+            </h5>
+            <a href="http://127.0.0.1:8000/organic/book_detail/?no=13">
+              상세보기
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+      <a href="/organic/book_list/"><button class="btn btn-sm btn-default">더보기</button></a></div>
+    </div>
+  </section>
+  <!-- end contact section -->
+  <!-- info section -->
+  {% include 'main/footer.html' %}
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

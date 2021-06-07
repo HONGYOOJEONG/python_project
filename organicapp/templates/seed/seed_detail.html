@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>Ninom</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this templates -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <style type="text/css">
+    .img-box{
+      margin:0px auto;
+    }
+  .table{
+    width:500px;
+    height:500px;
+    font-size:large;
+  }
+  .dImage{
+    margin:0px auto;
+  }
+
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="brand_box">
+      <a class="navbar-brand" href="main.html">
+        <span>
+          종자 모음
+        </span>
+      </a>
+    </div>
+  </div>
+  <!-- nav section -->
+  {% include 'main/menu.html' %}
+  <!-- about section -->
+  <section class="about_section layout_padding">
+    <hr>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-3">
+          <div style="height:30px"></div>
+          <h1 style="text-decoration:overline #484848">&nbsp;{{name}}</h1>
+          <div style="height:20px"></div>
+          <div class="img-box">
+            <img src="{{main_image}}">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-box">
+            <p style="font-size:20px;text-decoration:overline #484848">
+              제품 설명
+            </p>
+            <div class="container dImage">
+              <img src="{{detail_image}}" width="450px" height="600px">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-box">
+            <div class="heading_container">
+              <br><br>
+              <span style="color:red;font-size:15px">소량제작하여 1인당 1개 구매가 가능합니다</span>
+              <table class="table">
+                <tr>
+                  <th class="text-center">카테고리</th>
+                  <td class="text-center">{{cno}}</td>
+                </tr>
+                <tr>
+                  <th class="text-center">정가</th>
+                  <td class="text-center">{{pay}}</td>
+                </tr>
+                <tr>
+                  <th class="text-center">판매가</th>
+                  <td class="text-center">{{pay}}</td>
+                </tr>
+                <tr>
+                  <th class="text-center">구매 제한</th>
+                  <td class="text-center">최대 1개</td>
+                </tr>
+                <tr>
+                  <th class="text-center">구매 혜택</th>
+                  <td class="text-center">{{no}}&nbsp;포인트 적립</td>
+                </tr>
+                <tr>
+                  <th class="text-center">배송 방법</th>
+                  <td class="text-center">{{delivery}}</td>
+                </tr>
+                <tr>
+                  <th class="text-center">배송비</th>
+                  <td class="text-center">{{delivery_pay}}</td>
+                </tr>
+              </table>
+              <div class="btn-box">
+                <a href="">
+                  바로구매
+                </a>
+                <a href="">
+                  장바구니
+                </a>
+                <a href="">
+                  ❤ / ♡
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-1">
+
+      </div>
+      <div class="col-sm-8">
+
+      </div>
+      <div class="col-sm-3">
+
+      </div>
+
+    </div>
+  </section>
+  <!-- end about section -->
+
+  <!-- info section -->
+  {% include 'main/footer.html' %}
+  <!-- footer section -->
+
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

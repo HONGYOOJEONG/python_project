@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Ninom</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this templates -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="brand_box">
+      <a class="navbar-brand" href="index.html">
+        <span>
+           자유게시판
+        </span>
+      </a>
+    </div>
+    <!-- end header section -->
+  </div>
+
+  <!-- nav section -->
+  {% include 'main/menu.html' %}
+  <!-- end nav section -->
+
+  <!-- board section -->
+  <section class="fruit_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <hr>
+        <h2>
+          자유게시판
+        </h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h3 class="text-center">자유롭게 글을 작성해보세요</h3>
+    <div class="row">
+
+      <div class="col-sm-2">
+
+      </div>
+
+      <div class="col-sm-8">
+        <div class="row">
+          <form method="post" action="../update_ok/">
+                 {% csrf_token %}
+             <table class="table">
+                 <tr>
+                     <th width="20%" class="text-right">이름</th>
+                     <td width="80%">
+                         <input type="text" name="name" size="15" class="input-sm" required value="{{name}}">
+                         <input type="hidden" name="no" value="{{no}}">
+                     </td>
+                 </tr>
+                 <tr>
+                     <th width="20%" class="text-right">제목</th>
+                     <td width="80%">
+                         <input type="text" name="subject" size="45" class="input-sm" required value="{{subject}}">
+                     </td>
+                 </tr>
+                 <tr>
+                     <th width="20%" class="text-right">내용</th>
+                     <td width="80%">
+                         <textarea rows="10" cols="50" name="content" required>{{content}}</textarea>
+                     </td>
+                 </tr>
+                 <tr>
+                     <th width="20%" class="text-right">비밀번호</th>
+                     <td width="80%">
+                         <input type="password" name="pwd" size="10" class="input-sm" required>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td colspan="2" class="text-center">
+                         <input type="submit" value="수정" class="btn btn-sm btn-default">
+                         <input type="button" value="취소" class="btn btn-sm btn-default"
+                                onclick="javascript:history.back()">
+                     </td>
+                 </tr>
+             </table>
+             </form>
+        </div>
+      </div>
+    </div>
+        </div>
+    <div class="col-sm-1"></div>
+  </section>
+
+
+  <!-- end board section -->
+
+
+  <!-- info section -->
+  {% include 'main/footer.html' %}
+  <!-- footer section -->
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
